@@ -1,13 +1,13 @@
-require('dotenv').config();
+require("dotenv").config();
 
 module.exports = {
-  name: 'default',
-  type: process.env.DB_TYPE,
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  username: process.env.DB_USER,
-  password: process.env.DB_PWD,
-  database: process.env.DB_NAME,
+  name: "default",
+  type: process.env.TYPEORM_CONNECTION,
+  host: process.env.TYPEORM_HOST,
+  port: process.env.TYPEORM_PORT,
+  username: process.env.TYPEORM_USERNAME,
+  password: process.env.TYPEORM_PASSWORD,
+  database: process.env.TYPEORM_DATABASE,
   logging: true,
-  entities: ['src/entities/*{.ts,.js}'],
+  entities: ["src/entities/*{.ts,.js}"],
 };
